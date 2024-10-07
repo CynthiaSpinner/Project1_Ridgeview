@@ -146,7 +146,7 @@
     max-width: 51.8125rem;
     /* 16px - 24px */
     margin: 0 0 2.5rem 0;
-    color: #fff;
+    color: #dc2836;
     position: relative;
   }
   #hero-1620 .cs-text {
@@ -161,39 +161,7 @@
     margin-bottom: 2rem;
     color: #fff;
   }
-  #hero-1620 .cs-button-solid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: #1a1a1a;
-    min-width: 12.5rem;
-    padding: 0 1.5rem;
-    background-color: var(--primary);
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
-  #hero-1620 .cs-button-solid:before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: #fff;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.3s;
-  }
-  #hero-1620 .cs-button-solid:hover:before {
-    width: 100%;
-  }
+ 
   #hero-1620 .cs-card-group {
     margin: 0;
     padding: 0;
@@ -210,7 +178,7 @@
     margin: 0;
     /* 24px - 32px */
     padding: clamp(1.5rem, 3vw, 2rem);
-    background-color: #fff;
+    background-color: #fafbfc;
     box-shadow: 0px 12px 80px 0px rgba(26, 26, 26, 0.08);
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
@@ -260,7 +228,7 @@
     content: "";
     width: 100%;
     height: 100%;
-    background: #111926;
+    background: rgba(255,255,255, .8);
     opacity: 0.8;
     position: absolute;
     display: block;
@@ -278,6 +246,7 @@
     width: 100%;
     object-fit: cover;
   }
+  
 }
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
