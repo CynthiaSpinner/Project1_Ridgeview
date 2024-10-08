@@ -753,7 +753,7 @@
     width: auto;
   }
 }
-/* Inbetween - 600px */
+/* In between - 600px */
 @media only screen and (min-width: 37.5em) {
   #cs-footer .cs-container {
     display: flex;

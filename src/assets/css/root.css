@@ -3,7 +3,7 @@
 <---        Core Styles         -->
 <--- -------------------------- -*/
 :root {
-  /* Add these styles to your global stylesheet, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
+  /* Add these styles to your global stylesheets, which is used across all site pages. You only need to do this once. All elements in the library derive their variables and base styles from this central sheet, simplifying site-wide edits. For instance, if you want to modify how your h2's appear across the site, you just update it once in the global styles, and the changes apply everywhere. */
   --primary: #dc2836;
   --primaryLight: #a8dadc;
   --secondary: #a8dadc;
@@ -25,7 +25,9 @@ body {
   padding: 0;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   /* prevents padding from affecting height and width */
   box-sizing: border-box;
 }
@@ -34,7 +36,7 @@ body {
   line-height: 1.2em;
   text-transform: uppercase;
   text-align: inherit;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: 700;
   color: var(--primary);
   margin-bottom: 0.25rem;
@@ -61,40 +63,36 @@ body {
   margin: 0;
   color: var(--bodyTextColor);
 }
-                          
+
 .cs-button-solid {
-  
   text-align: center;
   font-size: 1rem;
-  border: 1px ridged rgba(110,20,27, .6);
+  border: 1px ridged rgba(110, 20, 27, 0.6);
   border-radius: 8px 8px;
   /* 46px - 56px */
   line-height: clamp(2.875rem, 8vw, 3.5rem);
   text-decoration: none;
   font-weight: 700;
   min-width: 10.875rem;
-  
+
   color: #fff;
   padding: 0 1.5rem;
   /* prevents padding and border from affecting height and width */
   box-sizing: border-box;
   background-color: var(--primary);
-  
-  box-shadow: inset .2rem .2rem .7rem rgb(197,161,163);
+
+  box-shadow: inset 0.2rem 0.2rem 0.7rem rgb(197, 161, 163);
   display: inline-block;
   position: relative;
   z-index: 1;
-  transition:
-      background-color 0.3s,
-      box-shadow 0.3s,
-      border 0.3s;
+  transition: background-color 0.3s, box-shadow 0.3s, border 0.3s;
 }
 .cs-button-solid:hover {
   border: none;
   background-color: #1a1a1a;
-  box-shadow: 4px 4px 12px 0px rgba(29,53,87,.5);++
+  box-shadow: 4px 4px 12px 0px rgba(29, 53, 87, 0.5);
 }
-                                                       
+
 /*-- -------------------------- -->
 <---     Mobile Navigation      -->
 <--- -------------------------- -*/
@@ -116,10 +114,10 @@ body {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
   #cs-navigation:before {
-    content: '';
+    content: "";
     width: 100%;
     height: 0vh;
     background: rgba(0, 0, 0, 0.6);
@@ -131,7 +129,7 @@ body {
     right: 0;
     z-index: -1100;
     opacity: 0;
-    transition: height .5s, opacity .5s;
+    transition: height 0.5s, opacity 0.5s;
   }
   #cs-navigation.cs-active:before {
     height: 150vh;
@@ -140,7 +138,7 @@ body {
   #cs-navigation.cs-active .cs-ul-wrapper {
     opacity: 1;
     transform: scaleY(1);
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
   #cs-navigation.cs-active .cs-li {
     transform: translateY(0);
@@ -200,7 +198,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    transition: opacity .3s, visibility .3s, height .3s;
+    transition: opacity 0.3s, visibility 0.3s, height 0.3s;
   }
   #cs-navigation .cs-social-link {
     text-decoration: none;
@@ -251,14 +249,14 @@ body {
     height: 2.875rem;
     margin: 0 0 0 auto;
     background-color: var(--primary);
-    box-shadow: inset .2rem .2rem .7rem rgb(197,161,163);
+    box-shadow: inset 0.2rem 0.2rem 0.7rem rgb(197, 161, 163);
     border: none;
     /* .3px solid rgba(110,20,27, .2); */
     border-radius: 8px 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform .6s;
+    transition: transform 0.6s;
   }
   #cs-navigation .cs-toggle.cs-active {
     transform: rotate(180deg);
@@ -286,7 +284,7 @@ body {
     width: 100%;
     height: 2px;
     border-radius: 2px;
-    background-color: #FAFBFC;
+    background-color: #fafbfc;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -294,8 +292,8 @@ body {
   #cs-navigation .cs-line1 {
     top: 0;
     transform-origin: center;
-    transition: transform .5s, top .3S, left .3S;
-    animation-duration: .7s;
+    transition: transform 0.5s, top 0.3s, left 0.3s;
+    animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-direction: normal;
@@ -303,15 +301,15 @@ body {
   #cs-navigation .cs-line2 {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    transition: top .3s, left .3s, transform .5s;
-    animation-duration: .7s;
+    transition: top 0.3s, left 0.3s, transform 0.5s;
+    animation-duration: 0.7s;
     animation-timing-function: ease;
     animation-fill-mode: forwards;
     animation-direction: normal;
   }
   #cs-navigation .cs-line3 {
     bottom: 0;
-    transition: bottom .3s, opacity .3s;
+    transition: bottom 0.3s, opacity 0.3s;
   }
   #cs-navigation .cs-ul-wrapper {
     width: 100%;
@@ -327,7 +325,7 @@ body {
     z-index: -1;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform .4s, opacity .3s;
+    transition: transform 0.4s, opacity 0.3s;
   }
   #cs-navigation .cs-ul {
     margin: 0;
@@ -350,46 +348,46 @@ body {
     /* transition from these values */
     transform: translateY(-4.375rem);
     opacity: 0;
-    transition: transform .6s, opacity .9s;
+    transition: transform 0.6s, opacity 0.9s;
   }
   #cs-navigation .cs-li:nth-of-type(1) {
-    transition-delay: .05s;
+    transition-delay: 0.05s;
   }
   #cs-navigation .cs-li:nth-of-type(2) {
-    transition-delay: .1s;
+    transition-delay: 0.1s;
   }
   #cs-navigation .cs-li:nth-of-type(3) {
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
   #cs-navigation .cs-li:nth-of-type(4) {
-    transition-delay: .2s;
+    transition-delay: 0.2s;
   }
   #cs-navigation .cs-li:nth-of-type(5) {
-    transition-delay: .25s;
+    transition-delay: 0.25s;
   }
   #cs-navigation .cs-li:nth-of-type(6) {
-    transition-delay: .3s;
+    transition-delay: 0.3s;
   }
   #cs-navigation .cs-li:nth-of-type(7) {
-    transition-delay: .35s;
+    transition-delay: 0.35s;
   }
   #cs-navigation .cs-li:nth-of-type(8) {
-    transition-delay: .4s;
+    transition-delay: 0.4s;
   }
   #cs-navigation .cs-li:nth-of-type(9) {
-    transition-delay: .45s;
+    transition-delay: 0.45s;
   }
   #cs-navigation .cs-li:nth-of-type(10) {
-    transition-delay: .5s;
+    transition-delay: 0.5s;
   }
   #cs-navigation .cs-li:nth-of-type(11) {
-    transition-delay: .55s;
+    transition-delay: 0.55s;
   }
   #cs-navigation .cs-li:nth-of-type(12) {
-    transition-delay: .6s;
+    transition-delay: 0.6s;
   }
   #cs-navigation .cs-li:nth-of-type(13) {
-    transition-delay: .65s;
+    transition-delay: 0.65s;
   }
   #cs-navigation .cs-li-link {
     /* 16px - 24px */
@@ -418,8 +416,6 @@ body {
   }
 }
 
-
-
 /*-- -------------------------- -->
 <---     Navigation Dropdown    -->
 <--- -------------------------- -*/
@@ -447,7 +443,7 @@ body {
   }
   #cs-navigation .cs-dropdown .cs-li-link {
     position: relative;
-    transition: opacity .3s;
+    transition: opacity 0.3s;
   }
   #cs-navigation .cs-drop-icon {
     width: 0.9375rem;
@@ -471,7 +467,8 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
-    transition: padding .3s, margin .3s, height .3s, opacity .3s, visibility .3s;
+    transition: padding 0.3s, margin 0.3s, height 0.3s, opacity 0.3s,
+      visibility 0.3s;
   }
   #cs-navigation .cs-drop-li {
     list-style: none;
@@ -521,7 +518,7 @@ body {
     z-index: -100;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform .3s, visibility .3s, opacity .3s;
+    transition: transform 0.3s, visibility 0.3s, opacity 0.3s;
   }
   #cs-navigation .cs-drop-li {
     list-style: none;
@@ -532,46 +529,46 @@ body {
     height: auto;
     display: block;
     transform: translateY(-0.625rem);
-    transition: opacity .6s, transform .6s;
+    transition: opacity 0.6s, transform 0.6s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(1) {
-    transition-delay: .05s;
+    transition-delay: 0.05s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(2) {
-    transition-delay: .1s;
+    transition-delay: 0.1s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(3) {
-    transition-delay: .15s;
+    transition-delay: 0.15s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(4) {
-    transition-delay: .2s;
+    transition-delay: 0.2s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(5) {
-    transition-delay: .25s;
+    transition-delay: 0.25s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(6) {
-    transition-delay: .3s;
+    transition-delay: 0.3s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(7) {
-    transition-delay: .35s;
+    transition-delay: 0.35s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(8) {
-    transition-delay: .4s;
+    transition-delay: 0.4s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(9) {
-    transition-delay: .45s;
+    transition-delay: 0.45s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(10) {
-    transition-delay: .5s;
+    transition-delay: 0.5s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(11) {
-    transition-delay: .55s;
+    transition-delay: 0.55s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(12) {
-    transition-delay: .6s;
+    transition-delay: 0.6s;
   }
   #cs-navigation .cs-drop-li:nth-of-type(13) {
-    transition-delay: .65s;
+    transition-delay: 0.65s;
   }
   #cs-navigation .cs-li-link.cs-drop-link {
     font-size: 1rem;
@@ -602,11 +599,10 @@ body {
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
   body.scroll #cs-navigation {
-    /* 53px, the ssme height as the cs-top-container */
+    /* 53px, the same height as the cs-top-container */
     transform: translateY(-3.3125rem);
   }
   #cs-navigation {
-    
     width: 100%;
     padding: 0;
     /* prevents padding from affecting height and width */
@@ -615,7 +611,7 @@ body {
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
   #cs-navigation .cs-top-bar {
     width: 100%;
@@ -628,6 +624,8 @@ body {
     width: 100%;
     max-width: 80rem;
     padding: 1rem;
+    padding-left: 29%;
+    padding-right: 29%;
     /* prevents padding from affecting height and width */
     box-sizing: border-box;
     display: flex;
@@ -639,7 +637,8 @@ body {
   }
   #cs-navigation .cs-top-container:before {
     /* grey background */
-    content: '';
+    
+    content: "";
     width: 100vw;
     height: 100%;
     background: #f7f7f7;
@@ -688,7 +687,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
   #cs-navigation .cs-social-link:hover {
     transform: scale(1.1);
@@ -703,13 +702,13 @@ body {
     max-width: 80rem;
     margin: auto;
     padding: 0 1rem;
-    /* prevents padding from affectin gheight */
+    /* prevents padding from affecting height */
     box-sizing: border-box;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     gap: 1.5rem;
-    position: relative;
+    position: left;
   }
   #cs-navigation .cs-toggle {
     display: none;
@@ -755,7 +754,7 @@ body {
     color: var(--headerColor);
     display: block;
     position: relative;
-    transition: color .3s;
+    transition: color 0.3s;
   }
   #cs-navigation .cs-li-link:hover {
     color: var(--primary);
@@ -767,11 +766,8 @@ body {
   #cs-navigation .cs-button-solid {
     margin: 0 0 0 auto;
   }
-
-
 }
-                                
-                                
+
 /* <--- -------------------------- -->
 <---   Interior Page Header     -->
 <--- -------------------------- --> */
@@ -855,7 +851,7 @@ body {
     font-size: inherit;
     padding-block-end: 6.25rem;
   }
-}  
+}
 /*-- -------------------------- -->
 <---    Final Call To Action    -->
 <--- -------------------------- -*/
